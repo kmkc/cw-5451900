@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+}
+
+.op-animation {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.op-animation img {
+  width: 100%;
+  height: auto;
+}
+
+.op-animation .row {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.op-animation .row .icon {
+  position: relative;
+  flex: auto;
+  height: 20vw;
+}
+
+.op-animation .row .icon img {
+  position: absolute;
+  display: block;
+  top: -100vh;
+  transform: translate(0, -50%);
+}
+
+.op-animation .row .icon img.bg1 {
+  animation: anime-bg1 3s ease-in-out 0s 1 forwards;
+}
+
+.op-animation .row .icon img.bg2 {
+  animation: anime-bg1 3s ease-in-out .4s 1 forwards;
+}
+
+.op-animation .row .icon img.bg3 {
+  animation: anime-bg1 3s ease-in-out .2s 1 forwards;
+}
+
+.op-animation .row .icon img.bg4 {
+  animation: anime-bg1 3s ease-in-out .8s 1 forwards;
+}
+
+.op-animation .row .icon img.bg5 {
+  animation: anime-bg1 3s ease-in-out .1s 1 forwards;
+}
+
+.op-animation .row .icon img.bg6 {
+  animation: anime-bg1 3s ease-in-out 1s 1 forwards;
+}
+
+.op-animation .row .icon img.bg7 {
+  width: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: anime-bg1 3s ease-in-out .8s 1 forwards;
+}
+
+.op-animation .row1 {
+  width: 70%;
+  max-width: 800px;
+  bottom: 50vh;
+}
+
+.op-animation .row1 .icon {
+  margin: 2vw;
+}
+
+.op-animation .row2 {
+  width: 95%;
+  max-width: 1000px;
+  top: 50vh;
+}
+
+.op-animation .logo {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  max-width: 600px;
+  z-index: 2;
+  opacity: 0;
+  animation: anime-logo 1.5s ease-in-out 3s 1 forwards;
+}
+
+.op-animation::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1;
+  opacity: 0;
+  animation: anime-whitebg 1.5s ease-in-out 3s 1 forwards;
+}
+
+@keyframes anime-logo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes anime-whitebg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .9;
+  }
+}
+
+@keyframes anime-bg1 {
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 50%;
+  }
+}
